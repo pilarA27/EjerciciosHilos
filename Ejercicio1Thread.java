@@ -4,7 +4,6 @@ class ImprimeCeroYUno extends Thread {
             System.out.println("0");
             System.out.println("1");
         }
-        
     }
 }
 
@@ -14,3 +13,4 @@ public class Ejercicio1Thread {
         hiloCero.start();
     }
 }
+

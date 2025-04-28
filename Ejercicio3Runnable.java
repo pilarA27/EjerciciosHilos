@@ -1,8 +1,8 @@
-class IncrementoThread implements Runnable {
+class IncrementoRunnable implements Runnable {
     private int id;
     private static int num = 0;
 
-    public IncrementoThread(int id) {
+    public IncrementoRunnable(int id) {
         this.id = id;
     }
 
@@ -15,7 +15,7 @@ class IncrementoThread implements Runnable {
 
     public static void crearThreads() {
         for (int i = 1; i <= 4; i++) {
-            IncrementoThread tarea = new IncrementoThread(i);
+            IncrementoRunnable tarea = new IncrementoRunnable(i);
             Thread hilo = new Thread(tarea);
             hilo.start();
         }
@@ -24,6 +24,6 @@ class IncrementoThread implements Runnable {
 
 public class Ejercicio3Runnable {
     public static void main(String[] args) {
-        IncrementoThread.crearThreads();
+        IncrementoRunnable.crearThreads();
     }
 }
